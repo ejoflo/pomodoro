@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	color: #707070;
+	text-transform: uppercase;
+}
+
+#container {
+	display: grid;
+	margin: 0 auto;
+	width: 440px;
+	height: 1000px;
+	grid-template: 350px 70px 150px / 100%;
+}
+
+#timerContainer {
+	grid-row: 1 / 2;
+	display: grid;
+	grid-template: 1fr 2fr 2fr 59px 1fr / 1fr 2fr 59px 2fr 1fr;
+}
+
+.timerTitle {
+	grid-row: 1 / 2;
+	grid-column: 1 / 6;
+	justify-self: center;
+	align-self: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.sessionInfo {
+	grid-row: 2 / 3;
+	grid-column: 2 / 5;
+	align-self: end;
+	justify-self: center;
+}
+
+#session {
+	color: #1ED394;
+	font-size: 22px;
+}
+
+#round {
+	font-size: 22px;
+}
+
+.timer {
+	grid-row: 3 / 4;
+	grid-column: 2 / 5;
+	justify-self: center;
+	align-self: center;
+    white-space: nowrap;
+	font-size: 85px;
+	text-shadow: 1px 1px 5px #c4c4c4;
+	color: #1ED394;
+}
+
+.progress { /* div holds all circle elements */
+	position: relative;
+	width: 300px;
+	height: 300px;
+	grid-row: 2 / 6;
+	grid-column: 2 / 5;
+	justify-self: center;
+	align-self: center;
+	z-index: 5;
+}
+
+svg { /* drawn progress circle */
+	position: relative;
+	top: -18.98em;
+	z-index: 3;
+}
+  
+path { /* in svg, path that is drawn */
+    stroke-dasharray: 3040;
+	stroke-dashoffset: 3040;
+	stroke: #1ED394;
+    /* animation: draw 25s linear; */
+}
+
+.rewBtn {
+	grid-row: 2 / 6;
+	grid-column: 1 / 2;
+	align-self: center;
+	justify-self: end;
+}
+
+#rewind { /* rewind button */
+	background: url('./img/rwd.svg');
+	height: 50px;
+	width: 50px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#rewind:hover {
+	background: url('./img/rwd_hover.svg');
+}
+
+.prevBtn {
+	position: relative;
+	z-index: 10;
+	grid-row: 4 / 5;
+	grid-column: 2 / 3;
+	justify-self: end;
+	align-self: center;
+}
+
+#previous {
+	background: url('./img/prev_rd.svg');
+	height: 55px;
+	width: 55px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#previous:hover {
+	background: url('./img/prev_rd_hover.svg');
+}
+
+.playPauseBtn {
+	position: relative;
+	height: 59px;
+	z-index: 10;
+	grid-row: 4 / 5;
+	grid-column: 3 / 4;
+	justify-self: center;
+	align-self: center;
+}
+
+#playPause {
+	height: 59px;
+	width: 59px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.play {
+	background: url('./img/play.svg');
+	position: relative;
+	left: 5px;
+}
+
+.play:hover {
+	background: url('./img/play_hover.svg');
+}
+
+.pause {
+	background: url('./img/pause.svg');
+}
+
+.pause:hover {
+	background: url('./img/pause_hover.svg');
+}
+
+.nextBtn {
+	position: relative;
+	z-index: 10;
+	grid-row: 4 / 5;
+	grid-column: 4 / 5;
+	justify-self: start;
+	align-self: center;
+}
+
+#next {
+	background: url('./img/next_rd.svg');
+	height: 55px;
+	width: 55px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#next:hover {
+	background: url('./img/next_rd_hover.svg');
+}
+
+.fwdBtn {
+	grid-row: 2 / 6;
+	grid-column: 5 / 6;
+	align-self: center;
+	justify-self: start;
+}
+
+#forward { /* forward button */
+	background: url('./img/fwd.svg');
+	height: 50px;
+	width: 50px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#forward:hover {
+	background: url('./img/fwd_hover.svg');
+}
+
+/* RESTART SECTION */
+
+#restartContainer {
+	grid-row: 2 / 3;
+	justify-self: center;
+	align-self: center;
+}
+
+#restart {
+	background: url('./img/restart.svg');
+	height: 55px;
+	width: 55px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+#restart:hover {
+	background: url('./img/restart_hover.svg');
+}
+
+/* SETTINGS SECTION */
+
+#settingsContainer {
+	grid-row: 3 / 4;
+	display: grid;
+	grid-template: 1fr 86px 1fr / 22% 56% 22%;
+	grid-gap: 4px;
+}
+
+#settingsTitle {
+	grid-row: 1 / 2;
+	grid-column: 1 / 4;
+	align-self: end;
+	justify-self: center;
+}
+
+#settingsBox {
+	display: grid;
+	grid-row: 2 / 3;
+	grid-column: 2 / 3;
+	grid-gap: 4px;
+	grid-template: repeat(3, 1fr) / 115px 20px 60px 20px;
+	width: 245px;
+	padding: 5px 5px;
+	border: 4px solid #707070;
+	border-radius: 10px;
+	justify-self: center;
+	align-items: center;
+	justify-items: center;
+}
+
+#settingsBox p {
+	padding-right: 10px; 
+	justify-self: end;
+}
+
+#settingsBox button {
+	border: .10em solid #707070;
+	border-radius: 100%;
+	padding-bottom: 2px;
+	color: #707070;
+	font-size: 15px;
+	line-height: 0%;
+	outline: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+
+#focusLabel {
+    color: #1ED394;
+}
+
+#breakLabel {
+	color: #EF8232;
+}
+
+#longBreakLabel {
+	color: #D31E6B;
+}
+
+#resetBox {
+	width: 100%;
+	height: 30px;
+	grid-row: 3 / 4;
+	grid-column: 2 / 3;
+	display: grid;
+	grid-template: 100% / 147px 97px;
+	grid-gap: 3px;
+	align-self: center;
+	justify-self: center;
+}
+
+#resetBox button {
+	border: 4px solid #707070;
+	border-radius: 8px;
+	outline: none;
+	cursor: pointer;
+}
+
+/* PROGRESS BAR */
+
+/* @keyframes draw {
+from { stroke-dashoffset: 3040 }
+to { stroke-dashoffset: 0; }
+} 
+*/

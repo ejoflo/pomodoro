@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pomodoro Focus Timer</title>
+        <link type='text/css' rel='stylesheet' href='style.css'>
+        <script src='script.js' defer></script>
+    </head>
+    <body>
+        <div id='container'>
+            <div id='timerContainer'>
+                <div class='timerTitle'>
+                    <p>POMODORO FOCUS TIMER</p>
+                </div>
+                <div class='sessionInfo'>          
+                    <span id='session'></span> <span id='round'></span>
+                </div>
+                <div class='rewBtn'>
+                    <button id='rewind' title="Back 30 seconds"></button>
+                </div>
+                <div class='timer'>
+                </div>
+                <div class='progress'>
+                    <img src="./img/progress.svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" viewBox="0 0 1024 1024" fill-rule="evenodd" clip-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path stroke="#707070" stroke-width="42.16" d="M512 28.082c267.26 0 483.918 216.658 483.918 483.918S779.26 995.918 512 995.918 28.082 779.26 28.082 512c0-266.408 215.277-482.535 481.362-483.911" fill="none" vectornator:layerName="progress"/></svg>    
+                </div>
+                <div class='prevBtn'>
+                    <button id='previous' title="Previous session"></button>
+                </div>
+                <div class='playPauseBtn'>
+                    <button class='play' id='playPause' title="Start/Stop timer"></button>
+                </div>
+                <div class='nextBtn'>
+                    <button id='next' title="Next session"></button>
+                </div>
+                <div class='fwdBtn'>
+                    <button id='forward' title="Forward 30 seconds"></button>
+                </div>
+            </div>
+            <div id='restartContainer'>
+                <div class='restartBtn'>
+                    <button id='restart' title="Restart"></button>
+                </div>
+            </div>
+            <div id='settingsContainer'>
+                <div id='settingsTitle'>
+                    <p>SETTINGS</p>
+                </div>
+                <div id='settingsBox'>
+                    <p class='label' id='focusLabel'>FOCUS</p>
+                    <button id='focusMinus'>-</button>
+                    <p id='focusSetting'></p>
+                    <button id='focusPlus'>+</button>
+                    <p class='label' id='breakLabel'>BREAK</p>
+                    <button id='breakMinus'>-</button>
+                    <p id='breakSetting'></p>
+                    <button id='breakPlus'>+</button>                
+                    <p class='label' id='longBreakLabel'>LONG BREAK</p>   
+                    <button id='longBreakMinus'>-</button>
+                    <p id='longBreakSetting'></p>                     
+                    <button id='longBreakPlus'>+</button>
+                </div>
+                <div id='resetBox'>
+                    <button id='reset'>RESET TO DEFAULT</button>
+                    <button id='sound'>SOUND ON</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
