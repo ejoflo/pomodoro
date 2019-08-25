@@ -360,7 +360,7 @@ function updateTotalSeconds() {
 
     totalSeconds = (focusSession) ? focusDuration * SECONDS_PER_MINUTE : (round % 4 === 0) ? longBreakDuration * SECONDS_PER_MINUTE : breakDuration * SECONDS_PER_MINUTE;
 
-    if (button.textContent === 'PAUSE') {
+    if (button.className === 'pause') {
         timer = setInterval(countdown, INTERVAL);
     }
 }
