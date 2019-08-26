@@ -135,7 +135,7 @@ function createListeners() {
     });
 
     soundButton.addEventListener('click', (e) => {
-        switchSound();
+        toggleSound();
     });
 
     playPauseButton.addEventListener('touchstart', (e) => {
@@ -214,7 +214,7 @@ function createListeners() {
     });
 
     soundButton.addEventListener('touchstart', (e) => {
-        switchSound();
+        toggleSound();
         e.preventDefault();
     });
 }
@@ -393,9 +393,17 @@ function setFocusSetting(buttonId) {
     }
 
     if (session === 'Focus' && playPauseButton.className === 'pause') {   // stops progress bar and timer when changing current session settings
-        restart();
+        stopCountdown();
+        totalSeconds = focusDuration * SECONDS_PER_MINUTE;    
+        displayTimer();
+        displayProgressBar();
+        updatePlayPause();
     } else if (session === 'Focus' && playPauseButton.className === 'play') {
-        restart();
+        updatePlayPause();
+        stopCountdown();
+        totalSeconds = focusDuration * SECONDS_PER_MINUTE;    
+        displayTimer();
+        displayProgressBar();
         updatePlayPause();
     }
     focusSettingDisplay.textContent = focusDuration + ':00';
@@ -490,7 +498,7 @@ function displayTimer() {
     }
 }
 
-function switchSound() {
+function toggleSound() {
     soundButton.textContent = (soundButton.textContent === 'SOUND OFF') ? 'SOUND ON' : 'SOUND OFF';
     
     playSound();
