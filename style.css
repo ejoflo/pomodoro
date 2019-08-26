@@ -4,8 +4,23 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: barlow;
+	src: url(./fonts/Barlow-Regular.ttf);
+}
+
+@font-face {
+	font-family: barlowMedium;
+	src: url(./fonts/Barlow-Medium.ttf);
+}
+
+@font-face {
+	font-family: barlowBold;
+	src: url(./fonts/Barlow-Bold.ttf);
+}
+
 body {
-	font-family: Helvetica, sans-serif;
+	font-family: barlow;
 	color: #707070;
 	text-transform: uppercase;
 }
@@ -31,6 +46,7 @@ body:after {   /* preload images */
 }
 
 .timerTitle {
+	font-family: barlowMedium;
 	grid-row: 1 / 2;
 	grid-column: 1 / 6;
 	justify-self: center;
@@ -41,6 +57,7 @@ body:after {   /* preload images */
 }
 
 .sessionInfo {
+	font-family: barlowMedium;
 	grid-row: 2 / 3;
 	grid-column: 2 / 5;
 	align-self: end;
@@ -244,6 +261,7 @@ path { /* in svg, path that is drawn */
 /* SETTINGS SECTION */
 
 #settingsContainer {
+	font-family: barlowMedium;
 	grid-row: 3 / 4;
 	display: grid;
 	grid-template: 1fr 86px 1fr / 22% 56% 22%;
@@ -329,6 +347,7 @@ path { /* in svg, path that is drawn */
 }
 
 #resetBox button {
+	font-family: barlowMedium;
 	font-size: 13px;
 	font-weight: 500;
 	background-color: #fff;
