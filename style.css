@@ -20,6 +20,7 @@ body:after {   /* preload images */
 	margin: 0 auto;
 	width: 440px;
 	height: auto;
+	padding-top: 15px;
 	grid-template: 350px 70px 150px / 100%;
 }
 
@@ -34,8 +35,9 @@ body:after {   /* preload images */
 	grid-column: 1 / 6;
 	justify-self: center;
 	align-self: center;
-	font-size: 20px;
-	font-weight: bold;
+	font-size: 21px;
+	font-weight: 500;
+	letter-spacing: -.02em;
 }
 
 .sessionInfo {
@@ -48,6 +50,7 @@ body:after {   /* preload images */
 #session {
 	color: #1ED394;
 	font-size: 22px;
+	font-weight: 500;
 }
 
 #round {
@@ -269,15 +272,22 @@ path { /* in svg, path that is drawn */
 #settingsBox button {
 	border: .10em solid #707070;
 	border-radius: 100%;
+	padding-right: 1px;
 	padding-bottom: 2px;
 	color: #707070;
 	background-color: #fff;
-	font-size: 15px;
-	line-height: 0%;
+	font-size: 13pt;
+	font-weight: 600;
+	line-height: .5;
 	outline: none;
 	cursor: pointer;
 	width: 20px;
 	height: 20px;
+}
+
+#settingsBox button:hover {
+	border-color: #1ED394;
+	color:#1ED394;
 }
 
 #focusLabel {
@@ -305,12 +315,17 @@ path { /* in svg, path that is drawn */
 }
 
 #resetBox button {
-	font-size: 14px;
+	font-size: 13px;
+	font-weight: 500;
 	background-color: #fff;
 	border: 4px solid #707070;
 	border-radius: 8px;
 	outline: none;
 	cursor: pointer;
+}
+
+.resetColor {
+	color: #707070;
 }
 
 .resetColor:hover {
