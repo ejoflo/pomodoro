@@ -8,7 +8,6 @@ body {
 	font-family: Helvetica, sans-serif;
 	color: #707070;
 	text-transform: uppercase;
-
 }
 
 body:after {   /* preload images */
@@ -279,23 +278,19 @@ path { /* in svg, path that is drawn */
 }
 
 #settingsBox button {
-	border: .10em solid #707070;
-	border-radius: 100%;
-	padding-right: 1px;
-	padding-bottom: 2px;
 	color: #707070;
 	background-color: #fff;
 	font-size: 13pt;
 	font-weight: 600;
-	line-height: .5;
+	border: none;
 	outline: none;
 	cursor: pointer;
 	width: 20px;
 	height: 20px;
 }
 
-#settingsBox button:hover {
-	border-color: #1ED394;
+#focusPlus:hover, 
+#focusMinus:hover {
 	color:#1ED394;
 }
 
@@ -303,8 +298,18 @@ path { /* in svg, path that is drawn */
     color: #1ED394;
 }
 
+#breakPlus:hover, 
+#breakMinus:hover {
+	color:#EF8232;
+}
+
 #breakLabel {
 	color: #EF8232;
+}
+
+#longBreakPlus:hover, 
+#longBreakMinus:hover {
+	color:#D31E6B;
 }
 
 #longBreakLabel {
