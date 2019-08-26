@@ -390,6 +390,13 @@ function setFocusSetting(buttonId) {
             focusDuration -= 1;
         }
     }
+
+    if (session === 'Focus' && playPauseButton.className === 'pause') {   // stops progress bar and timer when changing current session settings
+        restart();
+    } else if (session === 'Focus' && playPauseButton.className === 'play') {
+        restart();
+        updatePlayPause();
+    }
     focusSettingDisplay.textContent = focusDuration + ':00';
 }
 
@@ -407,6 +414,21 @@ function setBreakSetting(buttonId) {
             breakDuration -= 1;
         }
     }
+
+    if (session === 'Break' && playPauseButton.className === 'pause') {   // stops progress bar and timer when changing current session settings
+        stopCountdown();
+        totalSeconds = breakDuration * SECONDS_PER_MINUTE;    
+        displayTimer();
+        displayProgressBar();
+        updatePlayPause();
+    } else if (session === 'Break' && playPauseButton.className === 'play') {
+        updatePlayPause();
+        stopCountdown();
+        totalSeconds = breakDuration * SECONDS_PER_MINUTE;    
+        displayTimer();
+        displayProgressBar();
+        updatePlayPause();
+    }
     breakSettingDisplay.textContent = breakDuration + ':00';
 }
 
@@ -423,6 +445,21 @@ function setLongBreakSetting(buttonId) {
         } else {
             longBreakDuration -= 1;
         }
+    }
+
+    if (session === 'Long Break' && playPauseButton.className === 'pause') {   // stops progress bar and timer when changing current session settings
+        stopCountdown();
+        totalSeconds = longBreakDuration * SECONDS_PER_MINUTE;    
+        displayTimer();
+        displayProgressBar();
+        updatePlayPause();
+    } else if (session === 'Long Break' && playPauseButton.className === 'play') {
+        updatePlayPause();
+        stopCountdown();
+        totalSeconds = longBreakDuration * SECONDS_PER_MINUTE;    
+        displayTimer();
+        displayProgressBar();
+        updatePlayPause();
     }
     longBreakSettingDisplay.textContent = longBreakDuration + ':00';
 }
