@@ -238,7 +238,7 @@ function reset() {
     setFocusSetting();
     setBreakSetting();
     setLongBreakSetting();
-
+    updatePlayPause();
 }
 
 function startCountdown() {
@@ -261,6 +261,7 @@ function restart() {
     displayProgressBar();
     displaySession();
     displayRound();
+    updatePlayPause();
 }
 
 function countdown() {
@@ -390,7 +391,6 @@ function setFocusSetting(buttonId) {
         }
     }
     focusSettingDisplay.textContent = focusDuration + ':00';
-    displayTimer();
 }
 
 function setBreakSetting(buttonId) {
@@ -408,7 +408,6 @@ function setBreakSetting(buttonId) {
         }
     }
     breakSettingDisplay.textContent = breakDuration + ':00';
-    displayTimer();
 }
 
 function setLongBreakSetting(buttonId) {
@@ -426,7 +425,6 @@ function setLongBreakSetting(buttonId) {
         }
     }
     longBreakSettingDisplay.textContent = longBreakDuration + ':00';
-    displayTimer();
 }
 
 function displayTimer() {

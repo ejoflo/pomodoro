@@ -11,15 +11,15 @@ body {
 }
 
 body:after {   /* preload images */
+	display: none;
 	content: url('./img/rwd.svg') url('./img/rwd_hover.svg') url('./img/prev_rd.svg') url('./img/prev_rd_hover.svg') url('./img/play.svg') url('./img/play_hover.svg') url('./img/pause.svg') url('./img/pause_hover.svg') url('./img/next_rd.svg') url('./img/next_rd_hover.svg') url('./img/fwd.svg') url('./img/fwd_hover.svg') url('./img/restart.svg') url('./img/restart_hover.svg');
-
 }
 
 #container {
 	display: grid;
 	margin: 0 auto;
 	width: 440px;
-	height: 1000px;
+	height: auto;
 	grid-template: 350px 70px 150px / 100%;
 }
 
