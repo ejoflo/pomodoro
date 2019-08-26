@@ -159,7 +159,7 @@ path { /* in svg, path that is drawn */
 	background: url('./img/play.svg');
 	position: relative;
 	left: 5px;
-	transition: background .175s ease-in-out;
+	/* transition: background .175s ease-in; */
 }
 
 .play:hover {
@@ -168,7 +168,7 @@ path { /* in svg, path that is drawn */
 
 .pause {
 	background: url('./img/pause.svg');
-	transition: background .175s ease-in-out;
+	/* transition: background .175s ease-in; */
 }
 
 .pause:hover {
