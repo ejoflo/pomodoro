@@ -1,13 +1,14 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
 	font-family: Helvetica, sans-serif;
 	color: #707070;
 	text-transform: uppercase;
+
 }
 
 body:after {   /* preload images */
@@ -106,6 +107,7 @@ path { /* in svg, path that is drawn */
 	border: none;
 	outline: none;
 	cursor: pointer;
+	transition: background .175s ease-in-out;
 }
 
 #rewind:hover {
@@ -128,6 +130,7 @@ path { /* in svg, path that is drawn */
 	border: none;
 	outline: none;
 	cursor: pointer;
+	transition: background .175s ease-in-out;
 }
 
 #previous:hover {
@@ -156,6 +159,7 @@ path { /* in svg, path that is drawn */
 	background: url('./img/play.svg');
 	position: relative;
 	left: 5px;
+	transition: background .175s ease-in-out;
 }
 
 .play:hover {
@@ -164,6 +168,7 @@ path { /* in svg, path that is drawn */
 
 .pause {
 	background: url('./img/pause.svg');
+	transition: background .175s ease-in-out;
 }
 
 .pause:hover {
@@ -186,6 +191,7 @@ path { /* in svg, path that is drawn */
 	border: none;
 	outline: none;
 	cursor: pointer;
+	transition: background .175s ease-in-out;
 }
 
 #next:hover {
@@ -197,6 +203,7 @@ path { /* in svg, path that is drawn */
 	grid-column: 5 / 6;
 	align-self: center;
 	justify-self: start;
+	transition: background .175s ease-in-out;
 }
 
 #forward { /* forward button */
@@ -206,6 +213,7 @@ path { /* in svg, path that is drawn */
 	border: none;
 	outline: none;
 	cursor: pointer;
+	transition: background .175s ease-in-out;
 }
 
 #forward:hover {
@@ -227,6 +235,7 @@ path { /* in svg, path that is drawn */
 	border: none;
 	outline: none;
 	cursor: pointer;
+	transition: background .175s ease-in-out;
 }
 
 #restart:hover {
