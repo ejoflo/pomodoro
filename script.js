@@ -221,7 +221,8 @@ function createListeners() {
 
 function reset() {
     stopCountdown();
-    soundButton.textContent = 'SOUND ON';
+    soundButton.textContent = 'SOUND OFF';
+    soundButton.style.color = '#D31E3C';
     focusDuration = 25;
     breakDuration = 5;
     longBreakDuration = 25;
@@ -490,7 +491,15 @@ function displayTimer() {
 }
 
 function switchSound() {
-    soundButton.textContent = (soundButton.textContent === 'SOUND ON') ? 'SOUND OFF' : 'SOUND ON';
+    soundButton.textContent = (soundButton.textContent === 'SOUND OFF') ? 'SOUND ON' : 'SOUND OFF';
+    
+    playSound();
+
+    if (soundButton.textContent === 'SOUND OFF') {
+        soundButton.style.color = '#D31E3C';
+    } else {
+        soundButton.style.color = '#1ED35A';
+    }
 }
 
 function playSound() {
@@ -502,7 +511,7 @@ function playSound() {
     breakSound.volume = 0.6;   
     longBreakSound.volume = 0.6;   
     
-    if (soundButton.textContent === 'SOUND OFF') {
+    if (soundButton.textContent === 'SOUND ON') {
         if (session === 'Break') { 
             breakSound.play();
         } else if (session === 'Long Break') {
